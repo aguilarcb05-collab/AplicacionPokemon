@@ -5,10 +5,10 @@ import java.io.Serializable;
 public class Pokemon implements Serializable {
     private int id;
     private String nombre;
-    private Double hp;
-    private Double attach;
-    private Double defense;
-    private Double speed;
+    private int hp;
+    private int attach;
+    private int defense;
+    private int speed;
     private TipoPokemon tipo;
 
     public int getId() {
@@ -27,35 +27,35 @@ public class Pokemon implements Serializable {
         this.nombre = nombre;
     }
 
-    public Double getHp() {
+    public int getHp() {
         return hp;
     }
 
-    public void setHp(Double hp) {
+    public void setHp(int hp) {
         this.hp = hp;
     }
 
-    public Double getAttach() {
+    public int getAttach() {
         return attach;
     }
 
-    public void setAttach(Double attach) {
+    public void setAttach(int attach) {
         this.attach = attach;
     }
 
-    public Double getDefense() {
+    public int getDefense() {
         return defense;
     }
 
-    public void setDefense(Double defense) {
+    public void setDefense(int defense) {
         this.defense = defense;
     }
 
-    public Double getSpeed() {
+    public int getSpeed() {
         return speed;
     }
 
-    public void setSpeed(Double speed) {
+    public void setSpeed(int speed) {
         this.speed = speed;
     }
 
@@ -67,7 +67,7 @@ public class Pokemon implements Serializable {
         this.tipo = tipo;
     }
 
-    public Pokemon(int id, String nombre, Double hp, Double attach, Double defense, Double speed, TipoPokemon tipo) {
+    public Pokemon(int id, String nombre, int hp, int attach, int defense, int speed, TipoPokemon tipo) {
         this.id = id;
         this.nombre = nombre;
         this.hp = hp;
