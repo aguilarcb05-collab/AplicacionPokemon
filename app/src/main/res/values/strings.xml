@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">AplicacionPokemon</string>
+    <string name="app_name">Le Pokedex</string>
+    <string name="name">Name</string>
+    <string name="HP">HP</string>
+    <string name="Attack">Attack</string>
+    <string name="Defense">Defense</string>
+    <string name="Speed">Speed</string>
+    <string name="Save">Save</string>
+    <string name="Back">Back</string>
+    <string name="Delete">Delete</string>
 </resources>
