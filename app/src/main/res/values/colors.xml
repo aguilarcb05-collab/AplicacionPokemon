@@ -4,25 +4,13 @@
     <color name="white">#FFFFFFFF</color>
 
     <!-- Colores distintivos por Tipo de Pokémon -->
-    <color name="type_normal">#A8A878</color>     <!-- Normal -->
+
     <color name="type_fire">#F08030</color>       <!-- Fuego -->
     <color name="type_water">#6890F0</color>      <!-- Agua -->
-    <color name="type_electric">#F8D030</color>   <!-- Eléctrico -->
     <color name="type_grass">#78C850</color>      <!-- Planta -->
     <color name="type_ice">#98D8D8</color>        <!-- Hielo -->
-    <color name="type_fighting">#C03028</color>   <!-- Lucha -->
     <color name="type_poison">#A040A0</color>     <!-- Veneno -->
     <color name="type_ground">#E0C068</color>     <!-- Tierra -->
-    <color name="type_flying">#A890F0</color>     <!-- Volador -->
     <color name="type_psychic">#F85888</color>    <!-- Psíquico -->
-    <color name="type_bug">#A8B820</color>        <!-- Bicho -->
-    <color name="type_rock">#B8A038</color>       <!-- Roca -->
-    <color name="type_ghost">#705898</color>      <!-- Fantasma -->
-    <color name="type_dragon">#7038F8</color>     <!-- Dragón -->
-    <color name="type_steel">#B8B8D0</color>      <!-- Acero -->
-    <color name="type_fairy">#EE99AC</color>      <!-- Hada -->
-    <color name="type_dark">#705848</color>       <!-- Siniestro -->
-
-
 
 </resources>
