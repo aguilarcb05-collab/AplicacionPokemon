@@ -1,7 +1,5 @@
-package com.example.aplicacionpokemon;
+package model;
 
 public enum TipoPokemon {
     AGUA, FUEGO, HIELO, TIERRA, PLANTA, VENENO, PSIQUICO;
-
-
 }

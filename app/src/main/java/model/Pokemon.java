@@ -1,4 +1,4 @@
-package com.example.aplicacionpokemon;
+package model;
 
 import java.io.Serializable;
 
