@@ -32,7 +32,7 @@
     <EditText
         android:id="@+id/tfNombre"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:ems="10"
         android:hint="@string/name"
         android:inputType="text"
@@ -45,7 +45,7 @@
     <EditText
         android:id="@+id/tfHp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="@string/HP"
@@ -59,7 +59,7 @@
     <EditText
         android:id="@+id/tfAttack"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:ems="10"
         android:hint="@string/Attack"
         android:inputType="text"
@@ -72,7 +72,7 @@
     <EditText
         android:id="@+id/tfSpeed"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:ems="10"
         android:hint="@string/Speed"
         android:inputType="text"
@@ -85,7 +85,7 @@
     <EditText
         android:id="@+id/tfDefense"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="@string/Defense"
@@ -99,7 +99,7 @@
     <Spinner
         android:id="@+id/sTipo"
         android:layout_width="210dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
