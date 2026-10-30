@@ -27,7 +27,7 @@
 
         <!-- Nombre del Pokémon -->
         <TextView
-            android:id="@+id/tvName2"
+            android:id="@+id/tvNombre2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
@@ -38,7 +38,7 @@
 
         <!-- Imagen -->
         <ImageView
-            android:id="@+id/idImage"
+            android:id="@+id/ivImagen"
             android:layout_width="140dp"
             android:layout_height="140dp"
             android:layout_gravity="center"
@@ -49,7 +49,7 @@
 
         <!-- Tipo -->
         <TextView
-            android:id="@+id/sType"
+            android:id="@+id/tvTipo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -112,14 +112,14 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/btnEditar"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Editar" />
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/btnBorrar"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

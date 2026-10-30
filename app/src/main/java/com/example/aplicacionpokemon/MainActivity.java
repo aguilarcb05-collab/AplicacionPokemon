@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         listaPersonalizada.setOnItemClickListener((parent, view, position, id) -> {
             // Cogemos el pokemon usando la lista visual actual (por si está filtrada)
             Pokemon p = listaVisual.get(position);
-            Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+            Intent intent = new Intent(MainActivity.this, detalles.class);
             intent.putExtra("pokemons", p);
             startActivity(intent);
         });
