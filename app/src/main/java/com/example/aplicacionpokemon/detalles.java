@@ -71,16 +71,16 @@ public class detalles extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        if(btnAtras.isPressed()){
+        if(v.getId() == R.id.btnAtras){
             Intent intentback=new Intent(this, MainActivity.class);
             startActivity(intentback);
         }
-        if(btnEditar.isPressed()){
+        if(v.getId() == R.id.btnEditar){
             Intent intentedit=new Intent(this, editarPokemon.class);
-            intentedit.putExtra("pokemons",p);
+            intentedit.putExtra("pokemons",p.getNombre());
             startActivity(intentedit);
         }
-        if(btnBorrar.isPressed()){
+        if(v.getId() == R.id.btnBorrar){
 
         }
     }

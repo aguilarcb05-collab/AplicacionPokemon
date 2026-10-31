@@ -6,7 +6,7 @@ public class Pokemon implements Serializable {
     private int id;
     private String nombre;
     private int hp;
-    private int attach;
+    private int attack;
     private int defense;
     private int speed;
     private TipoPokemon tipo;
@@ -36,11 +36,11 @@ public class Pokemon implements Serializable {
     }
 
     public int getAttach() {
-        return attach;
+        return attack;
     }
 
-    public void setAttach(int attach) {
-        this.attach = attach;
+    public void setAttack(int attach) {
+        this.attack = attach;
     }
 
     public int getDefense() {
@@ -67,11 +67,11 @@ public class Pokemon implements Serializable {
         this.tipo = tipo;
     }
 
-    public Pokemon(int id, String nombre, int hp, int attach, int defense, int speed, TipoPokemon tipo) {
+    public Pokemon(int id, String nombre, int hp, int attack, int defense, int speed, TipoPokemon tipo) {
         this.id = id;
         this.nombre = nombre;
         this.hp = hp;
-        this.attach = attach;
+        this.attack = attack;
         this.defense = defense;
         this.speed = speed;
         this.tipo = tipo;

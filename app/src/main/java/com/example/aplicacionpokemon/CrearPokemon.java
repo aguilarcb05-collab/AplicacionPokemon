@@ -1,6 +1,8 @@
 package com.example.aplicacionpokemon;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,4 +23,5 @@ public class CrearPokemon extends AppCompatActivity {
             return insets;
         });
     }
+
 }
