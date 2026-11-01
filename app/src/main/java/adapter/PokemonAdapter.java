@@ -37,7 +37,7 @@ public class PokemonAdapter extends ArrayAdapter<Pokemon> {
         tvNombre.setText(p.getNombre());
         tvHp.setText(String.valueOf(p.getHp()));
         tvDefense.setText(String.valueOf(p.getDefense()));
-        tvAttack.setText(String.valueOf(p.getAttach()));
+        tvAttack.setText(String.valueOf(p.getAttack()));
         tvSpeed.setText(String.valueOf(p.getSpeed()));
 
         switch (p.getTipo()) {

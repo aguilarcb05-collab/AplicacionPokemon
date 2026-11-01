@@ -29,7 +29,7 @@ public class editarPokemon extends AppCompatActivity implements View.OnClickList
     EditText tfDefense;
     EditText tfSpeed;
     Spinner sTipo;
-
+    Pokemon pokemonAEditar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +41,10 @@ public class editarPokemon extends AppCompatActivity implements View.OnClickList
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        if (getIntent() != null) {
+            pokemonAEditar = (Pokemon) getIntent().getSerializableExtra("pokemon_objeto");
+        }
+
         tfNombre=findViewById(R.id.tfNombre);
         tfAttack=findViewById(R.id.tfAttack);
         tfHp=findViewById(R.id.tfHp);
@@ -49,6 +53,12 @@ public class editarPokemon extends AppCompatActivity implements View.OnClickList
         sTipo=findViewById(R.id.sTipo);
         btnGuardar=findViewById(R.id.btnGuardar);
         btnAtras=findViewById(R.id.btnAtras);
+
+        tfNombre.setText(pokemonAEditar.getNombre());
+        tfHp.setText(String.valueOf(pokemonAEditar.getHp()));
+        tfAttack.setText(String.valueOf(pokemonAEditar.getAttack()));
+        tfDefense.setText(String.valueOf(pokemonAEditar.getDefense()));
+        tfSpeed.setText(String.valueOf(pokemonAEditar.getSpeed()));
 
         btnGuardar.setOnClickListener(this);
         btnAtras.setOnClickListener(this);
@@ -73,19 +83,17 @@ public class editarPokemon extends AppCompatActivity implements View.OnClickList
                     && !tfHp.getText().toString().isEmpty()
                     && !tfSpeed.getText().toString().isEmpty()){
 
-                for(Pokemon p: PopulateDatabase.pokemons){
-
-                    if(p.getNombre().equals(tfNombre.getText().toString())){
-                        encontrado=true;
-                        // Como el nombre no cambia, solo actualizamos los demás atributos
+                for (Pokemon p : PopulateDatabase.pokemons) {
+                    if (p.getId() == pokemonAEditar.getId()) {
+                        p.setNombre(tfNombre.getText().toString().trim());
                         p.setHp(Integer.parseInt(tfHp.getText().toString()));
                         p.setAttack(Integer.parseInt(tfAttack.getText().toString()));
                         p.setDefense(Integer.parseInt(tfDefense.getText().toString()));
                         p.setSpeed(Integer.parseInt(tfSpeed.getText().toString()));
                         p.setTipo((TipoPokemon) sTipo.getSelectedItem());
+                        encontrado=true;
                         break;
                     }
-
                 }
 
             }else{

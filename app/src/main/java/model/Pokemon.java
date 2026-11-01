@@ -35,7 +35,7 @@ public class Pokemon implements Serializable {
         this.hp = hp;
     }
 
-    public int getAttach() {
+    public int getAttack() {
         return attack;
     }
 
