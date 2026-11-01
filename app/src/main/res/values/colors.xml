@@ -2,4 +2,15 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Colores distintivos por Tipo de Pokémon -->
+
+    <color name="type_fire">#F08030</color>       <!-- Fuego -->
+    <color name="type_water">#6890F0</color>      <!-- Agua -->
+    <color name="type_grass">#78C850</color>      <!-- Planta -->
+    <color name="type_ice">#98D8D8</color>        <!-- Hielo -->
+    <color name="type_poison">#A040A0</color>     <!-- Veneno -->
+    <color name="type_ground">#E0C068</color>     <!-- Tierra -->
+    <color name="type_psychic">#F85888</color>    <!-- Psíquico -->
+
 </resources>
