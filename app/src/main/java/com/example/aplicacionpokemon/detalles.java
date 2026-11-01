@@ -13,6 +13,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import database.PopulateDatabase;
 import model.Pokemon;
 
 public class detalles extends AppCompatActivity implements View.OnClickListener{
@@ -82,6 +83,16 @@ public class detalles extends AppCompatActivity implements View.OnClickListener{
         }
         if(v.getId() == R.id.btnBorrar){
 
+            for(int i = 0; i < PopulateDatabase.pokemons.size(); i++){
+
+                if(PopulateDatabase.pokemons.get(i).getNombre().equals(p.getNombre())){
+
+                    PopulateDatabase.pokemons.remove(i);
+                    break;
+                }
+            }
+
+            finish();
         }
     }
 }

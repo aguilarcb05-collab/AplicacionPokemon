@@ -9,8 +9,6 @@ import android.widget.TextView;
 
 import com.example.aplicacionpokemon.R;
 
-import org.w3c.dom.Text;
-
 import java.util.List;
 
 import model.Pokemon;
@@ -42,6 +40,32 @@ public class PokemonAdapter extends ArrayAdapter<Pokemon> {
         tvAttack.setText(String.valueOf(p.getAttach()));
         tvSpeed.setText(String.valueOf(p.getSpeed()));
 
+        switch (p.getTipo()) {
+            case FUEGO:
+                convertView.setBackgroundColor(android.graphics.Color.parseColor("#FFCDD2")); // Rojo claro
+                break;
+            case AGUA:
+                convertView.setBackgroundColor(android.graphics.Color.parseColor("#BBDEFB")); // Azul claro
+                break;
+            case PLANTA:
+                convertView.setBackgroundColor(android.graphics.Color.parseColor("#C8E6C9")); // Verde claro
+                break;
+            case TIERRA:
+                convertView.setBackgroundColor(android.graphics.Color.parseColor("#D7CCC8")); // Marrón claro
+                break;
+            case VENENO:
+                convertView.setBackgroundColor(android.graphics.Color.parseColor("#E1BEE7")); // Morado claro
+                break;
+            case PSIQUICO:
+                convertView.setBackgroundColor(android.graphics.Color.parseColor("#F8BBD0")); // Rosa claro
+                break;
+            case HIELO:
+                convertView.setBackgroundColor(android.graphics.Color.parseColor("#B2EBF2")); // Cian claro
+                break;
+            default:
+                convertView.setBackgroundColor(android.graphics.Color.parseColor("#FFFFFF")); // Blanco por defecto
+                break;
+        }
 
         return convertView;
     }

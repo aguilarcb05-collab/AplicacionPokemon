@@ -43,12 +43,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        PopulateDatabase.populate();
+        if (PopulateDatabase.pokemons.isEmpty()) {
+            PopulateDatabase.populate();
+        }
 
         listaPersonalizada = findViewById(R.id.listaPersonalizada);
         btnFiltrar = findViewById(R.id.btnFiltrar);
         btnNewPokemon = findViewById(R.id.btnNewPokemon);
         sTipo = findViewById(R.id.sTipo);
+
         btnNewPokemon.setOnClickListener(this);
         btnFiltrar.setOnClickListener(this);
 
@@ -95,6 +98,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
 
             // 4. Refrescamos el adapter
+            adapterPokemon.notifyDataSetChanged();
+        }
+    }
+    // se ejecuta cada vez que regresas a esta pantalla
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (adapterPokemon != null) {
+            // Vaciamos la lista visual actual y la volvemos a rellenar con la base de datos actualizada
+            listaVisual.clear();
+            listaVisual.addAll(PopulateDatabase.pokemons);
+            // Avisamos al adaptador de que los datos han cambiado para que los pinte en pantalla
             adapterPokemon.notifyDataSetChanged();
         }
     }
