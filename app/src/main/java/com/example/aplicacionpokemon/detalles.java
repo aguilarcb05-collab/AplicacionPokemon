@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -85,13 +86,13 @@ public class detalles extends AppCompatActivity implements View.OnClickListener{
 
             for(int i = 0; i < PopulateDatabase.pokemons.size(); i++){
 
-                if(PopulateDatabase.pokemons.get(i).getNombre().equals(p.getNombre())){
+                if(PopulateDatabase.pokemons.get(i).getId()==(p.getId())){
 
                     PopulateDatabase.pokemons.remove(i);
                     break;
                 }
             }
-
+            Toast.makeText(getApplicationContext(),"Pokemon borrado correctamente",Toast.LENGTH_SHORT).show();
             finish();
         }
     }
