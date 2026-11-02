@@ -45,6 +45,7 @@ public class editarPokemon extends AppCompatActivity implements View.OnClickList
             pokemonAEditar = (Pokemon) getIntent().getSerializableExtra("pokemon_objeto");
         }
 
+
         tfNombre=findViewById(R.id.tfNombre);
         tfAttack=findViewById(R.id.tfAttack);
         tfHp=findViewById(R.id.tfHp);
@@ -62,11 +63,12 @@ public class editarPokemon extends AppCompatActivity implements View.OnClickList
 
         btnGuardar.setOnClickListener(this);
         btnAtras.setOnClickListener(this);
-
         // Adapter del enum de manera simple:
         adapterEnum = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, TipoPokemon.values());
         adapterEnum.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         sTipo.setAdapter(adapterEnum);
+
+        sTipo.setSelection(adapterEnum.getPosition(pokemonAEditar.getTipo()));
     }
 
 
