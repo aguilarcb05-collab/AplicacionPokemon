@@ -58,7 +58,7 @@ public class detalles extends AppCompatActivity implements View.OnClickListener{
         tvHp2.setText("HP: "+p.getHp());
         tvSpeed2.setText("Speed: "+p.getSpeed());
         tvDefense2.setText("Defense: "+p.getDefense());
-        tvAttack2.setText("Attack "+p.getAttach());
+        tvAttack2.setText("Attack "+p.getAttack());
         tvTipo.setText("Type: "+p.getTipo().name());
         ivImagen.setImageResource(p.getTipo().getResId());
 
@@ -78,7 +78,7 @@ public class detalles extends AppCompatActivity implements View.OnClickListener{
         }
         if(v.getId() == R.id.btnEditar){
             Intent intentedit=new Intent(this, editarPokemon.class);
-            intentedit.putExtra("pokemons",p.getNombre());
+            intentedit.putExtra("pokemon_objeto",p);
             startActivity(intentedit);
         }
         if(v.getId() == R.id.btnBorrar){
