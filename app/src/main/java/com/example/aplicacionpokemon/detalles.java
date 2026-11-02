@@ -83,15 +83,7 @@ public class detalles extends AppCompatActivity implements View.OnClickListener{
             startActivity(intentedit);
         }
         if(v.getId() == R.id.btnBorrar){
-
-            for(int i = 0; i < PopulateDatabase.pokemons.size(); i++){
-
-                if(PopulateDatabase.pokemons.get(i).getId()==(p.getId())){
-
-                    PopulateDatabase.pokemons.remove(i);
-                    break;
-                }
-            }
+            PopulateDatabase.pokemons.remove(p);
             Toast.makeText(getApplicationContext(),"Pokemon borrado correctamente",Toast.LENGTH_SHORT).show();
             finish();
         }

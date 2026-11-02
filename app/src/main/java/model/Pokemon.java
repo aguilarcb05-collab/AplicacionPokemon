@@ -1,6 +1,7 @@
 package model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class Pokemon implements Serializable {
     private int id;
@@ -78,5 +79,17 @@ public class Pokemon implements Serializable {
     }
 
     public Pokemon() {
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Pokemon pokemon = (Pokemon) o;
+        return id == pokemon.id && hp == pokemon.hp && attack == pokemon.attack && defense == pokemon.defense && speed == pokemon.speed && Objects.equals(nombre, pokemon.nombre) && tipo == pokemon.tipo;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, nombre, hp, attack, defense, speed, tipo);
     }
 }

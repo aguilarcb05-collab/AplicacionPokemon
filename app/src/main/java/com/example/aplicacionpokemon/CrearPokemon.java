@@ -99,7 +99,7 @@ public class CrearPokemon extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(getApplicationContext(),"Pokemon nuevo añadido",Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }else{
-                Toast.makeText(getApplicationContext(),"No se ha encontrado ese pokemon en la base de datos",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Ya se ha encontrado ese pokemon en la base de datos",Toast.LENGTH_SHORT).show();
             }
 
         }
